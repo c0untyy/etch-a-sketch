@@ -67,6 +67,7 @@ body {
     margin-top: 8px;
     color: #624343;
     background-color: #f1ebeb;
+    cursor:pointer;
 }
 
 .grid-change {
