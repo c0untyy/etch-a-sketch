@@ -7,6 +7,9 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@400;700&family=Lobster&display=swap");
+    </style>
   </head>
   <body>
     <div class="header">
@@ -16,12 +19,34 @@
       <div class="container">
         <div class="container-l">
           <div class="buttons">
-            <button id="black" class="topbuttons">Black</button>
-            <button id="eraser" class="topbuttons">Eraser</button>
-            <button id="reset" class="topbuttons">Reset</button>
-            <button id="rainbow" class="topbuttons">Rainbow</button>
+            <div class="mode">Drawing mode enabled!</div>
+            <button
+              id="black"
+              class="topbuttons"
+              onclick="changeColor('black')"
+            >
+              Black
+            </button>
+            <button
+              id="eraser"
+              class="topbuttons"
+              onclick="changeColor('white')"
+            >
+              Eraser
+            </button>
+            <button id="reset" class="topbuttons" onclick="clearGrid()">
+              Reset
+            </button>
+            <button
+              id="rainbow"
+              class="topbuttons"
+              onclick="changeColor('random')"
+            >
+              Rainbow
+            </button>
           </div>
           <div class="grid-change">
+            <p>Choose grid size:</p>
             <input
               type="text"
               placeholder="Size of Board"
@@ -29,6 +54,7 @@
               onchange="changeGridSize(this.value)"
             />
             <button id="changeGrid">Change size</button>
+            <div class="error"></div>
           </div>
         </div>
         <div id="grid" class="gridfield"></div>

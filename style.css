@@ -1,11 +1,15 @@
 body {
-    background-color: #e1dfdf;
+    background-color: #d1baba;
+
 }
 
 .header {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 35px;
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-size: 30px;
+
 }
 
 .main {
@@ -15,18 +19,25 @@ body {
 }
 
 .container {
-    border: 1px solid black;
     display: flex;
     justify-content: flex-start;
     width: 1000px;
     height: 700px;
+    box-sizing: border-box;
+    border-color: white;
+    border-width: 10px;
+    border-style: double;
 }
 
 .container-l {
     display: flex;
-    border-right: 1px solid black;
     width: 25%;
     flex-direction: column;
+    background-color: #e5d9d9;
+    box-sizing: border-box;
+    border-right-color: white;
+    border-right-width: 10px;
+    border-right-style: dashed;
 }
 
 
@@ -36,32 +47,56 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    gap: 64px;
-
+    margin-top: 45px;
+    gap: 48px;
 }
 
 .topbuttons {
-    font-size: 24px;
+    font-size: 28px;
     padding: 8px 30px;
-    cursor:pointer
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Lobster', cursive, sans-serif;
+    background-color: #f1ebeb;
+    color: #9c6f6f;
 }
 
-.grid-change{
-    display:flex;
+#changeGrid {
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 20px;
+    margin-top: 8px;
+    color: #624343;
+    background-color: #f1ebeb;
+}
+
+.grid-change {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
     justify-content: center;
+}
+
+.grid-change>p {
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 24px;
+    color: #624343;
 }
 
 #grid {
     width: 750px;
-    height: 700px;
+    height: 680px;
     background-color: white;
-    display:grid;
+    display: grid;
 }
 
 .square {
     background-color: white;
+}
+
+.mode {
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 25px;
+    color: #496f3f;
+    text-shadow: 0px 0px #000;
 }
