@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <h1 class="title">Etch-a-Sketch</h1>
+      <h1 class="title">Etch-a-Sketch</h1>
     </div>
-    
-</body>
+    <div class="main">
+      <div class="container">
+        <div class="container-l">
+          <div class="buttons">
+            <button id="black" class="topbuttons">Black</button>
+            <button id="eraser" class="topbuttons">Eraser</button>
+            <button id="reset" class="topbuttons">Reset</button>
+            <button id="rainbow" class="topbuttons">Rainbow</button>
+          </div>
+          <div class="grid-change">
+            <input
+              type="text"
+              placeholder="Size of Board"
+              value="16"
+              onchange="changeGridSize(this.value)"
+            />
+            <button id="changeGrid">Change size</button>
+          </div>
+        </div>
+        <div id="grid" class="gridfield"></div>
+      </div>
+    </div>
+  </body>
 </html>
