@@ -2,9 +2,9 @@ let grid = document.getElementById("grid");
 let resetbutton = document.getElementById("reset");
 let color = "black";
 let blackbutton = document.getElementById("black");
-let click = true;
 let slider = document.getElementById("mySlider");
 let defaultsize = 16;
+let mouseEvent = {};
 
 createGrid(defaultsize);
 
@@ -12,10 +12,9 @@ slider.oninput = function () {
   let currentvalue = slider.value;
   document.querySelector("b").innerText =
     currentvalue.toString() + "x" + currentvalue.toString();
-  changeGridSize(currentvalue);
+  createGrid(currentvalue);
 };
 
-//Before Branch
 function createGrid(size) {
   let squares = grid.querySelectorAll("div");
   squares.forEach((div) => div.remove());
@@ -28,18 +27,19 @@ function createGrid(size) {
     let square = document.createElement("div");
     square.classList.add("square");
     grid.insertAdjacentElement("beforeend", square);
-    square.addEventListener("mouseover", colorSquare);
+    square.addEventListener("mouseover", draw);
   }
 }
 
-function changeGridSize(currentvalue) {
-  createGrid(currentvalue);
-  console.log(currentvalue);
+grid.addEventListener("mousedown", () => (mouseEvent.mouseDown = true));
+grid.addEventListener("mouseup", () => delete mouseEvent.mouseDown);
+
+function canDraw() {
+  return mouseEvent.mouseDown;
 }
 
-//Painting
-function colorSquare() {
-  if (click) {
+function draw() {
+  if (canDraw()) {
     if (color === "random") {
       this.style.backgroundColor = randomColor();
     } else {
@@ -63,13 +63,13 @@ function clearGrid() {
 }
 
 //Drawing mode text
-document.querySelector("body").addEventListener("click", (e) => {
-  if (e.target.tagName != "BUTTON") {
-    click = !click;
-    if (click) {
-      document.querySelector(".mode").textContent = "Drawing mode enabled!";
-    } else {
-      document.querySelector(".mode").textContent = "Drawing mode disabled!";
-    }
-  }
-});
+// document.querySelector("body").addEventListener("click", (e) => {
+//   if (e.target.tagName != "BUTTON") {
+//     click = !click;
+//     if (click) {
+//       document.querySelector(".mode").textContent = "Drawing mode enabled!";
+//     } else {
+//       document.querySelector(".mode").textContent = "Drawing mode disabled!";
+//     }
+//   }
+// });

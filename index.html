@@ -20,7 +20,16 @@
       <div class="container">
         <div class="container-l">
           <div class="buttons">
-            <div class="mode">Drawing mode enabled!</div>
+            <div class="color-picker">
+              <h5 class="colorpicker-text">Pick a Color</h5>
+              <input
+                id="colorPicker"
+                class="colorpicker"
+                type="color"
+                value="#d1baba"
+                onchange="changeColor(this.value)"
+              />
+            </div>
             <button
               id="black"
               class="topbuttons"
@@ -46,8 +55,10 @@
               Rainbow
             </button>
           </div>
-          <div class="grid-change">
-            <p>Choose grid size:</p>
+          <div class="container-bottom">
+            <div class="grid-change">
+              <p>Choose Grid Size</p>
+            </div>
             <div class="slidercontainer">
               <input
                 type="range"
@@ -57,9 +68,9 @@
                 class="slider"
                 id="mySlider"
               />
-              <div class="slider-value">
-                <b id="output">16x16</b>
-              </div>
+            </div>
+            <div class="slider-value">
+              <b id="output">16x16</b>
             </div>
           </div>
         </div>

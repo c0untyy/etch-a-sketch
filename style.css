@@ -6,16 +6,16 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 20px;
     font-family: 'Dancing Script', cursive, sans-serif;
-    font-size: 30px;
+    font-size: 35px;
 
 }
 
 .main {
     display: flex;
     justify-content: center;
-    margin-top: 36px;
+    margin-top: 25px;
 }
 
 .container {
@@ -40,15 +40,12 @@ body {
     border-right-style: dashed;
 }
 
-
-
 .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 45px;
-    gap: 48px;
+    gap: 38px;
 }
 
 .topbuttons {
@@ -59,29 +56,6 @@ body {
     font-family: 'Lobster', cursive, sans-serif;
     background-color: #f1ebeb;
     color: #9c6f6f;
-}
-
-#changeGrid {
-    font-family: 'Caveat', cursive, sans-serif;
-    font-size: 20px;
-    margin-top: 8px;
-    color: #624343;
-    background-color: #f1ebeb;
-    cursor:pointer;
-}
-
-.grid-change {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: center;
-}
-
-.grid-change>p {
-    font-family: 'Caveat', cursive, sans-serif;
-    font-size: 24px;
-    color: #624343;
 }
 
 #grid {
@@ -95,9 +69,58 @@ body {
     background-color: white;
 }
 
-.mode {
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    width: 231px;
+    height: 150px;
+    align-items: center;
+}
+
+.colorpicker-text {
+    font-size: 24px;
+    font-family: 'Lobster', sans-serif;
+    font-weight: 400;
+    color: #624343;
+}
+
+#colorPicker {
+    height: 25px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.container-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.grid-change>p {
     font-family: 'Caveat', cursive, sans-serif;
-    font-size: 25px;
-    color: #496f3f;
-    text-shadow: 0px 0px #000;
+    font-size: 24px;
+    color: #624343;
+}
+
+.slider-value {
+    color: #624343;
+    font-size: 18px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: rgb(98, 67, 67);
+    overflow: visible;
+    cursor: pointer;
 }
