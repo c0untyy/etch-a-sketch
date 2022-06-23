@@ -1,6 +1,6 @@
 let grid = document.getElementById("grid");
 let resetbutton = document.getElementById("reset");
-let color = "black";
+let color = "#d1baba";
 let blackbutton = document.getElementById("black");
 let slider = document.getElementById("mySlider");
 let defaultsize = 16;
