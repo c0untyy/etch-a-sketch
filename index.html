@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="paint-palette.ico">
+    <link rel="shortcut icon" href="paint-palette.ico" />
     <script src="script.js" defer></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@400;700&family=Lobster&display=swap");
@@ -48,14 +48,19 @@
           </div>
           <div class="grid-change">
             <p>Choose grid size:</p>
-            <input
-              type="text"
-              placeholder="Size of Board"
-              value="16"
-              onchange="changeGridSize(this.value)"
-            />
-            <button id="changeGrid">Change size</button>
-            <div class="error"></div>
+            <div class="slidercontainer">
+              <input
+                type="range"
+                min="16"
+                max="64"
+                value="16"
+                class="slider"
+                id="mySlider"
+              />
+              <div class="slider-value">
+                <b id="output">16x16</b>
+              </div>
+            </div>
           </div>
         </div>
         <div id="grid" class="gridfield"></div>
